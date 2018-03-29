@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dsdatsme.instaclone.Home.HomeActivity">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+ <!--this is for top title bar-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relative_layout_top">
+        <include layout="@layout/layout_top_tabs"/>
+    </RelativeLayout>
+
+
+
+    <!--this is for middle image section-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative_layout_middle"
+        android:layout_below="@id/relative_layout_top">
+        <include layout="@layout/layout_center_viewpager"/>
+
+    </RelativeLayout>
+
+
+<!-- for bottom navigation -->
+    <include layout="@layout/layout_bottom_navigation_view"/>
+
+</RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
